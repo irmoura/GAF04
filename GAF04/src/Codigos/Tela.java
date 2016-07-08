@@ -31,38 +31,38 @@ public class Tela extends javax.swing.JFrame {
     public int AT5;//Atendimentos Técnico 5
     public int contador;
     
-    public int HCT1 = 22;//Hora Chegada Técnico 1
-    public int MCT1 = 0;//Minuto Chegada Técnico 1
-    public int HST1 = 23;//Hora Saida Técnico 1
-    public int MST1 = 55;//Minuto Saida Técnico 1
+    public int HCT1 = 13;//Hora Chegada Técnico 1
+    public int MCT1 = 40;//Minuto Chegada Técnico 1
+    public int HST1 = 22;//Hora Saida Técnico 1
+    public int MST1 = 0;//Minuto Saida Técnico 1
     public String ET1 = "13:40:00";//Entrada Técnico 1
     public String ST1 = "22:00:00";//Saida Técnico 1
     
-    public int HCT2 = 22;//Hora Chegada Técnico 2
-    public int MCT2 = 0;//Minuto Chegada Técnico 2
-    public int HST2 = 23;//Hora Saida Técnico 2
-    public int MST2 = 55;//Minuto Saida Técnico 2
+    public int HCT2 = 13;//Hora Chegada Técnico 2
+    public int MCT2 = 40;//Minuto Chegada Técnico 2
+    public int HST2 = 22;//Hora Saida Técnico 2
+    public int MST2 = 0;//Minuto Saida Técnico 2
     public String ET2 = "13:40:00";//Entrada Técnico 2
     public String ST2 = "22:00:00";//Saida Técnico 2
     
-    public int HCT3 = 22;//Hora Chegada Técnico 3
-    public int MCT3 = 0;//Minuto Chegada Técnico 3
-    public int HST3 = 23;//Hora Saida Técnico 3
-    public int MST3 = 55;//Minuto Saida Técnico 3
+    public int HCT3 = 13;//Hora Chegada Técnico 3
+    public int MCT3 = 40;//Minuto Chegada Técnico 3
+    public int HST3 = 22;//Hora Saida Técnico 3
+    public int MST3 = 0;//Minuto Saida Técnico 3
     public String ET3 = "13:40:00";//Entrada Técnico 3
     public String ST3 = "22:00:00";//Saida Técnico 3
     
-    public int HCT4 = 22;//Hora Chegada Técnico 4
-    public int MCT4 = 0;//Minuto Chegada Técnico 4
-    public int HST4 = 23;//Hora Saida Técnico 4
-    public int MST4 = 55;//Minuto Saida Técnico 4
+    public int HCT4 = 13;//Hora Chegada Técnico 4
+    public int MCT4 = 40;//Minuto Chegada Técnico 4
+    public int HST4 = 22;//Hora Saida Técnico 4
+    public int MST4 = 0;//Minuto Saida Técnico 4
     public String ET4 = "13:40:00";//Entrada Técnico 4
     public String ST4 = "22:00:00";//Saida Técnico 4
     
-    public int HCT5 = 22;//Hora Chegada Técnico 5
+    public int HCT5 = 10;//Hora Chegada Técnico 5
     public int MCT5 = 0;//Minuto Chegada Técnico 5
-    public int HST5 = 23;//Hora Saida Técnico 5
-    public int MST5 = 55;//Minuto Saida Técnico 5
+    public int HST5 = 18;//Hora Saida Técnico 5
+    public int MST5 = 20;//Minuto Saida Técnico 5
     public String ET5 = "10:00:00";//Entrada Técnico 5
     public String ST5 = "18:20:00";//Saida Técnico 5
     
@@ -183,27 +183,26 @@ public class Tela extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(TEXTO_NOME_DA_VEZ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addComponent(BOTAO_ZERAR)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TEXTO_TOTAL)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TEXTO_HORA))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(TEC_1_BTN)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TEC_2_BTN)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TEC_3_BTN)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TEC_4_BTN)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TEC_5_BTN)))
+                        .addContainerGap()
+                        .addComponent(TEC_1_BTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TEC_2_BTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TEC_3_BTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TEC_4_BTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TEC_5_BTN)
                         .addGap(0, 47, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(BOTAO_ZERAR)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TEXTO_TOTAL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TEXTO_HORA)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,15 +245,23 @@ public class Tela extends javax.swing.JFrame {
         /*TÉCNICOS QUE INICIAM DESABILITADOS*/
         TEC_1_BTN.setText(""+palavras_separadas_linha_1[0]);
         TEC_1_BTN.setEnabled(false);
+        TEC_1_BTN.setSelected(true);
         
         TEC_2_BTN.setText(""+palavras_separadas_linha_2[0]);
         TEC_2_BTN.setEnabled(false);
+        TEC_2_BTN.setSelected(true);
         
         TEC_3_BTN.setText(""+palavras_separadas_linha_3[0]);
         TEC_3_BTN.setEnabled(false);
+        TEC_3_BTN.setSelected(true);
         
         TEC_4_BTN.setText(""+palavras_separadas_linha_4[0]);
         TEC_4_BTN.setEnabled(false);
+        TEC_4_BTN.setSelected(true);
+        
+        TEC_5_BTN.setText(""+palavras_separadas_linha_5[0]);
+        TEC_5_BTN.setEnabled(false);
+        TEC_5_BTN.setSelected(true);
         ////////////////////////////////////////////////////////////////////////
         
         timer = new Timer(1000, (ActionEvent e) -> {
@@ -385,9 +392,10 @@ public class Tela extends javax.swing.JFrame {
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         /*ESTES TÉCNICOS INICIAM HABILITADOS*/
-        TEC_5_BTN.setSelected(ativar);
+        /*TEC_5_BTN.setEnabled(true);
+        TEC_5_BTN.setSelected(false);
         TEC_5_BTN.setBackground(Color.green);
-        TEC_5_BTN.setText(""+palavras_separadas_linha_5[0]);
+        TEC_5_BTN.setText(""+palavras_separadas_linha_5[0]);*/
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         /*DEPOIS DO HORARIO O BOTAO INICIA DESABILITADO*/
@@ -415,13 +423,37 @@ public class Tela extends javax.swing.JFrame {
         
         BOTAO_ZERAR.setEnabled(desativar);//Ao primeiro clique habilita o botão zerar
         
-        v++;//A cada clique incrementa +1  
-        
+        v++;//A cada clique incrementa +1
+
         ////////////////////////////////////////////////////////////////////////
         /*SE NENHUM BOTAO ESTIVER HABILITADO*/
         if((TEC_1_BTN.isSelected() && TEC_2_BTN.isSelected() && TEC_3_BTN.isSelected() && TEC_4_BTN.isSelected() && TEC_5_BTN.isSelected()) || 
           (!TEC_1_BTN.isEnabled() && !TEC_2_BTN.isEnabled() && !TEC_3_BTN.isEnabled() && !TEC_4_BTN.isEnabled() && !TEC_5_BTN.isEnabled())){
             JOptionPane.showMessageDialog(null,"Habilite pelo menos um Técnico.","Aviso",JOptionPane.WARNING_MESSAGE);
+        }
+        if(v == 1 && (TEC_1_BTN.isSelected() && TEC_2_BTN.isSelected() && TEC_3_BTN.isSelected() && TEC_4_BTN.isSelected() && !TEC_5_BTN.isSelected()) || 
+          (!TEC_1_BTN.isEnabled() && !TEC_2_BTN.isEnabled() && !TEC_3_BTN.isEnabled() && !TEC_4_BTN.isEnabled() && TEC_5_BTN.isEnabled())){
+            
+            TEXTO_NOME_DA_VEZ.setText(palavras_separadas_linha_5[0]+" - "+palavras_separadas_linha_5[1]);
+            AT5++;
+            TEC_5_BTN.setText(palavras_separadas_linha_5[0]+" - "+AT5);
+            TDA++;
+            
+        }
+        ////////////////////////////////////////////////////////////////////////
+        /*SE APENAS O 2º O 3º E O 4º TÉCNICO ESTIVEREM HABILITADOS*/
+        if(v == 5 && !TEC_2_BTN.isSelected() && !TEC_3_BTN.isSelected() && TEC_1_BTN.isSelected() && !TEC_4_BTN.isSelected() && TEC_5_BTN.isSelected()){
+            v = v - 4;
+        }
+        ////////////////////////////////////////////////////////////////////////
+        /*SE APENAS O 3º E O 4º TÉCNICO ESTIVEREM HABILITADOS*/
+        if(v == 5 && TEC_2_BTN.isSelected() && !TEC_3_BTN.isSelected() && TEC_1_BTN.isSelected() && !TEC_4_BTN.isSelected() && TEC_5_BTN.isSelected()){
+            v = v - 3;
+        }
+        ////////////////////////////////////////////////////////////////////////
+        /*SE APENAS O 2º E O 3º TÉCNICO ESTIVEREM HABILITADOS*/
+        if(v == 4 && !TEC_2_BTN.isSelected() && !TEC_3_BTN.isSelected() && TEC_1_BTN.isSelected() && TEC_4_BTN.isSelected() && TEC_5_BTN.isSelected()){
+            v = v - 2;
         }
         ////////////////////////////////////////////////////////////////////////
         /*NA VEZ DO TÉCNICO E O MESMO ESTIVER DESABILITADO*/
