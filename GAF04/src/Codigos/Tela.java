@@ -101,15 +101,18 @@ public class Tela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        TEXTO_NOME_DA_VEZ = new javax.swing.JLabel();
-        BOTAO_ZERAR = new javax.swing.JButton();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         TEXTO_TOTAL = new javax.swing.JLabel();
+        TEXTO_HORA = new javax.swing.JLabel();
         TEC_1_BTN = new javax.swing.JToggleButton();
         TEC_2_BTN = new javax.swing.JToggleButton();
         TEC_3_BTN = new javax.swing.JToggleButton();
-        TEXTO_HORA = new javax.swing.JLabel();
         TEC_4_BTN = new javax.swing.JToggleButton();
         TEC_5_BTN = new javax.swing.JToggleButton();
+        BOTAO_ZERAR = new javax.swing.JButton();
+        TEXTO_NOME_DA_VEZ = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        PAPEL_DE_PAREDE = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -123,18 +126,15 @@ public class Tela extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TEXTO_NOME_DA_VEZ.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
-        TEXTO_NOME_DA_VEZ.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        BOTAO_ZERAR.setText("Zerar");
-        BOTAO_ZERAR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BOTAO_ZERARActionPerformed(evt);
-            }
-        });
+        jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TEXTO_TOTAL.setText("Atendimentos : ");
+        jDesktopPane1.add(TEXTO_TOTAL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+
+        TEXTO_HORA.setText("00:00:00");
+        jDesktopPane1.add(TEXTO_HORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
 
         TEC_1_BTN.setText("Técnico 1");
         TEC_1_BTN.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -142,6 +142,7 @@ public class Tela extends javax.swing.JFrame {
                 TEC_1_BTNMouseClicked(evt);
             }
         });
+        jDesktopPane1.add(TEC_1_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
 
         TEC_2_BTN.setText("Técnico 2");
         TEC_2_BTN.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -149,6 +150,7 @@ public class Tela extends javax.swing.JFrame {
                 TEC_2_BTNMouseClicked(evt);
             }
         });
+        jDesktopPane1.add(TEC_2_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, -1));
 
         TEC_3_BTN.setText("Técnico 3");
         TEC_3_BTN.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -156,8 +158,7 @@ public class Tela extends javax.swing.JFrame {
                 TEC_3_BTNMouseClicked(evt);
             }
         });
-
-        TEXTO_HORA.setText("00:00:00");
+        jDesktopPane1.add(TEC_3_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, -1));
 
         TEC_4_BTN.setText("Técnico 4");
         TEC_4_BTN.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -165,6 +166,7 @@ public class Tela extends javax.swing.JFrame {
                 TEC_4_BTNMouseClicked(evt);
             }
         });
+        jDesktopPane1.add(TEC_4_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, -1, -1));
 
         TEC_5_BTN.setText("Técnico 5");
         TEC_5_BTN.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,57 +174,27 @@ public class Tela extends javax.swing.JFrame {
                 TEC_5_BTNMouseClicked(evt);
             }
         });
+        jDesktopPane1.add(TEC_5_BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(TEXTO_NOME_DA_VEZ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(TEC_1_BTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TEC_2_BTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TEC_3_BTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TEC_4_BTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TEC_5_BTN)
-                        .addGap(0, 47, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(BOTAO_ZERAR)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TEXTO_TOTAL)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TEXTO_HORA)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BOTAO_ZERAR)
-                    .addComponent(TEXTO_TOTAL)
-                    .addComponent(TEXTO_HORA))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(TEXTO_NOME_DA_VEZ, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TEC_1_BTN)
-                    .addComponent(TEC_2_BTN)
-                    .addComponent(TEC_3_BTN)
-                    .addComponent(TEC_4_BTN)
-                    .addComponent(TEC_5_BTN))
-                .addGap(63, 63, 63))
-        );
+        BOTAO_ZERAR.setText("Zerar");
+        BOTAO_ZERAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_ZERARActionPerformed(evt);
+            }
+        });
+        jDesktopPane1.add(BOTAO_ZERAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, -1));
+
+        TEXTO_NOME_DA_VEZ.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        TEXTO_NOME_DA_VEZ.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jDesktopPane1.add(TEXTO_NOME_DA_VEZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 646, 106));
+
+        jLabel1.setText("Desenvolvedor : Ismael Ribeiro");
+        jDesktopPane1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
+
+        PAPEL_DE_PAREDE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Codigos/Imagens/vistamizer-windows-vista-wallpaper-pack-14.jpg"))); // NOI18N
+        jDesktopPane1.add(PAPEL_DE_PAREDE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 440));
+
+        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 440));
 
         pack();
         setLocationRelativeTo(null);
@@ -701,6 +673,7 @@ public class Tela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BOTAO_ZERAR;
+    private javax.swing.JLabel PAPEL_DE_PAREDE;
     private javax.swing.JToggleButton TEC_1_BTN;
     private javax.swing.JToggleButton TEC_2_BTN;
     private javax.swing.JToggleButton TEC_3_BTN;
@@ -709,5 +682,7 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JLabel TEXTO_HORA;
     private javax.swing.JLabel TEXTO_NOME_DA_VEZ;
     private javax.swing.JLabel TEXTO_TOTAL;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
