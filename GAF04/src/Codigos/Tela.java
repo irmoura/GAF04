@@ -265,19 +265,31 @@ public class Tela extends javax.swing.JFrame {
 
             TEXTO_HORA.setText(horas);
             ////////////////////////////////////////////////////////////////////
-            /*HABILITA O BOTAO NA HORA E MINUTO DEFINIDOS*/
+            /*TÉCNICOS HABILITADOS NA HORA E MINUTO DEFINIDOS*/
             if(horas.equals(ET1)){
                 TEC_1_BTN.setEnabled(true);
                 TEC_1_BTN.setSelected(ativar);
                 TEC_1_BTN.setBackground(Color.green);
             }
             if(horas.equals(ET2)){
+                TEC_2_BTN.setEnabled(true);
                 TEC_2_BTN.setSelected(ativar);
                 TEC_2_BTN.setBackground(Color.green);
             }
             if(horas.equals(ET3)){
+                TEC_3_BTN.setEnabled(true);
                 TEC_3_BTN.setSelected(ativar);
                 TEC_3_BTN.setBackground(Color.green);
+            }
+            if(horas.equals(ET4)){
+                TEC_4_BTN.setEnabled(true);
+                TEC_4_BTN.setSelected(ativar);
+                TEC_4_BTN.setBackground(Color.green);
+            }
+            if(horas.equals(ET5)){
+                TEC_5_BTN.setEnabled(true);
+                TEC_5_BTN.setSelected(ativar);
+                TEC_5_BTN.setBackground(Color.green);
             }
             ////////////////////////////////////////////////////////////////////
             /*DESAHABILITA O BOTAO NA HORA E MINUTO DEFINIDOS*/
