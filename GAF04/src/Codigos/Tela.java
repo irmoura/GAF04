@@ -31,38 +31,38 @@ public class Tela extends javax.swing.JFrame {
     public int AT5;//Atendimentos Técnico 5
     public int contador;
     
-    public int HCT1 = 13;//Hora Chegada Técnico 1
-    public int MCT1 = 40;//Minuto Chegada Técnico 1
-    public int HST1 = 22;//Hora Saida Técnico 1
-    public int MST1 = 0;//Minuto Saida Técnico 1
+    public int HCT1 = 22;//Hora Chegada Técnico 1
+    public int MCT1 = 0;//Minuto Chegada Técnico 1
+    public int HST1 = 23;//Hora Saida Técnico 1
+    public int MST1 = 55;//Minuto Saida Técnico 1
     public String ET1 = "13:40:00";//Entrada Técnico 1
     public String ST1 = "22:00:00";//Saida Técnico 1
     
-    public int HCT2 = 13;//Hora Chegada Técnico 2
-    public int MCT2 = 40;//Minuto Chegada Técnico 2
-    public int HST2 = 22;//Hora Saida Técnico 2
-    public int MST2 = 0;//Minuto Saida Técnico 2
+    public int HCT2 = 22;//Hora Chegada Técnico 2
+    public int MCT2 = 0;//Minuto Chegada Técnico 2
+    public int HST2 = 23;//Hora Saida Técnico 2
+    public int MST2 = 55;//Minuto Saida Técnico 2
     public String ET2 = "13:40:00";//Entrada Técnico 2
     public String ST2 = "22:00:00";//Saida Técnico 2
     
-    public int HCT3 = 13;//Hora Chegada Técnico 3
-    public int MCT3 = 40;//Minuto Chegada Técnico 3
-    public int HST3 = 22;//Hora Saida Técnico 3
-    public int MST3 = 0;//Minuto Saida Técnico 3
+    public int HCT3 = 22;//Hora Chegada Técnico 3
+    public int MCT3 = 0;//Minuto Chegada Técnico 3
+    public int HST3 = 23;//Hora Saida Técnico 3
+    public int MST3 = 55;//Minuto Saida Técnico 3
     public String ET3 = "13:40:00";//Entrada Técnico 3
     public String ST3 = "22:00:00";//Saida Técnico 3
     
-    public int HCT4 = 13;//Hora Chegada Técnico 4
-    public int MCT4 = 40;//Minuto Chegada Técnico 4
-    public int HST4 = 22;//Hora Saida Técnico 4
-    public int MST4 = 0;//Minuto Saida Técnico 4
+    public int HCT4 = 22;//Hora Chegada Técnico 4
+    public int MCT4 = 0;//Minuto Chegada Técnico 4
+    public int HST4 = 23;//Hora Saida Técnico 4
+    public int MST4 = 55;//Minuto Saida Técnico 4
     public String ET4 = "13:40:00";//Entrada Técnico 4
     public String ST4 = "22:00:00";//Saida Técnico 4
     
-    public int HCT5 = 10;//Hora Chegada Técnico 5
+    public int HCT5 = 22;//Hora Chegada Técnico 5
     public int MCT5 = 0;//Minuto Chegada Técnico 5
-    public int HST5 = 18;//Hora Saida Técnico 5
-    public int MST5 = 20;//Minuto Saida Técnico 5
+    public int HST5 = 23;//Hora Saida Técnico 5
+    public int MST5 = 55;//Minuto Saida Técnico 5
     public String ET5 = "10:00:00";//Entrada Técnico 5
     public String ST5 = "18:20:00";//Saida Técnico 5
     
@@ -314,12 +314,41 @@ public class Tela extends javax.swing.JFrame {
         timer.start();
         
         ////////////////////////////////////////////////////////////////////////
-        /*DEPOIS DO HORARIO O BOTAO INICIA HABILITADO*/
-        if((hora >= HCT1 && minuto >= MCT1)){
+        /*DEPOIS DO HORARIO DE CHEGADA O BOTAO INICIA HABILITADO*/
+        if((hora >= HCT1 && minuto >= MCT1) ||
+           (hora > HCT1)){
             TEC_1_BTN.setEnabled(true);
             TEC_1_BTN.setSelected(false);
             TEC_1_BTN.setBackground(Color.green);
             TEC_1_BTN.setText(""+palavras_separadas_linha_1[0]);
+        }
+        if((hora >= HCT2 && minuto >= MCT2) ||
+           (hora > HCT2)){
+            TEC_2_BTN.setEnabled(true);
+            TEC_2_BTN.setSelected(false);
+            TEC_2_BTN.setBackground(Color.green);
+            TEC_2_BTN.setText(""+palavras_separadas_linha_2[0]);
+        }
+        if((hora >= HCT3 && minuto >= MCT3) ||
+           (hora > HCT3)){
+            TEC_3_BTN.setEnabled(true);
+            TEC_3_BTN.setSelected(false);
+            TEC_3_BTN.setBackground(Color.green);
+            TEC_3_BTN.setText(""+palavras_separadas_linha_3[0]);
+        }
+        if((hora >= HCT4 && minuto >= MCT4) ||
+           (hora > HCT4)){
+            TEC_4_BTN.setEnabled(true);
+            TEC_4_BTN.setSelected(false);
+            TEC_4_BTN.setBackground(Color.green);
+            TEC_4_BTN.setText(""+palavras_separadas_linha_4[0]);
+        }
+        if((hora >= HCT5 && minuto >= MCT5) ||
+           (hora > HCT5)){
+            TEC_5_BTN.setEnabled(true);
+            TEC_5_BTN.setSelected(false);
+            TEC_5_BTN.setBackground(Color.green);
+            TEC_5_BTN.setText(""+palavras_separadas_linha_5[0]);
         }
         ////////////////////////////////////////////////////////////////////////
         /*ANTES DO HORARIO O BOTAO INICIA DESABILITADO*/
@@ -329,15 +358,36 @@ public class Tela extends javax.swing.JFrame {
             TEC_1_BTN.setBackground(Color.red);
             TEC_1_BTN.setText(""+palavras_separadas_linha_1[0]);
         }
+        if((hora <= HCT2 && minuto < MCT2)){
+            TEC_2_BTN.setEnabled(false);
+            TEC_2_BTN.setSelected(true);
+            TEC_2_BTN.setBackground(Color.red);
+            TEC_2_BTN.setText(""+palavras_separadas_linha_2[0]);
+        }
+        if((hora <= HCT3 && minuto < MCT3)){
+            TEC_3_BTN.setEnabled(false);
+            TEC_3_BTN.setSelected(true);
+            TEC_3_BTN.setBackground(Color.red);
+            TEC_3_BTN.setText(""+palavras_separadas_linha_3[0]);
+        }
+        if((hora <= HCT4 && minuto < MCT4)){
+            TEC_4_BTN.setEnabled(false);
+            TEC_4_BTN.setSelected(true);
+            TEC_4_BTN.setBackground(Color.red);
+            TEC_4_BTN.setText(""+palavras_separadas_linha_4[0]);
+        }
+        if((hora <= HCT5 && minuto < MCT5)){
+            TEC_5_BTN.setEnabled(false);
+            TEC_5_BTN.setSelected(true);
+            TEC_5_BTN.setBackground(Color.red);
+            TEC_5_BTN.setText(""+palavras_separadas_linha_5[0]);
+        }
         ////////////////////////////////////////////////////////////////////////
-        /*ESTES BOTOES INICIAM HABILITADOS*/
-        TEC_2_BTN.setSelected(ativar);
-        TEC_2_BTN.setBackground(Color.green);
-        TEC_2_BTN.setText(""+palavras_separadas_linha_2[0]);
-        
-        TEC_3_BTN.setSelected(ativar);
-        TEC_3_BTN.setBackground(Color.green);
-        TEC_3_BTN.setText(""+palavras_separadas_linha_3[0]);
+        ////////////////////////////////////////////////////////////////////////
+        /*ESTES TÉCNICOS INICIAM HABILITADOS*/
+        TEC_5_BTN.setSelected(ativar);
+        TEC_5_BTN.setBackground(Color.green);
+        TEC_5_BTN.setText(""+palavras_separadas_linha_5[0]);
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         /*DEPOIS DO HORARIO O BOTAO INICIA DESABILITADO*/
@@ -349,6 +399,12 @@ public class Tela extends javax.swing.JFrame {
         }
         if((hora >= HST3 && minuto >= MST3)){
             TEC_3_BTN.setEnabled(false);
+        }
+        if((hora >= HST4 && minuto >= MST4)){
+            TEC_4_BTN.setEnabled(false);
+        }
+        if((hora >= HST5 && minuto >= MST5)){
+            TEC_5_BTN.setEnabled(false);
         }
         ////////////////////////////////////////////////////////////////////////
         
@@ -363,38 +419,44 @@ public class Tela extends javax.swing.JFrame {
         
         ////////////////////////////////////////////////////////////////////////
         /*SE NENHUM BOTAO ESTIVER HABILITADO*/
-        if(!TEC_1_BTN.isSelected() && TEC_2_BTN.isSelected() && TEC_3_BTN.isSelected() || 
-          !TEC_1_BTN.isEnabled() && !TEC_2_BTN.isEnabled() && !TEC_3_BTN.isEnabled()){
+        if((TEC_1_BTN.isSelected() && TEC_2_BTN.isSelected() && TEC_3_BTN.isSelected() && TEC_4_BTN.isSelected() && TEC_5_BTN.isSelected()) || 
+          (!TEC_1_BTN.isEnabled() && !TEC_2_BTN.isEnabled() && !TEC_3_BTN.isEnabled() && !TEC_4_BTN.isEnabled() && !TEC_5_BTN.isEnabled())){
             JOptionPane.showMessageDialog(null,"Habilite pelo menos um Técnico.","Aviso",JOptionPane.WARNING_MESSAGE);
         }
         ////////////////////////////////////////////////////////////////////////
-        /*SE NENHUM BOTAO ESTIVER HABILITADO*/
-        if(TEC_1_BTN.isSelected() && TEC_2_BTN.isSelected() && TEC_3_BTN.isSelected() || 
-          !TEC_1_BTN.isEnabled() && !TEC_2_BTN.isEnabled() && !TEC_3_BTN.isEnabled()){
-            JOptionPane.showMessageDialog(null,"Habilite pelo menos um Técnico.","Aviso",JOptionPane.WARNING_MESSAGE);
-        }
-        ////////////////////////////////////////////////////////////////////////
-        /*SE A VEZ FOR DO 1º E O MESMO ESTIVER DESABILITADO*/
+        /*NA VEZ DO TÉCNICO E O MESMO ESTIVER DESABILITADO*/
         if(v == 1 && TEC_1_BTN.isSelected() || v == 1 && !TEC_1_BTN.isEnabled()){
             v++;
         }
-        ////////////////////////////////////////////////////////////////////////
-        /*SE A VEZ FOR DO 2º E O MESMO ESTIVER DESABILITADO*/
         if(v == 2 && TEC_2_BTN.isSelected() || v == 2 && !TEC_2_BTN.isEnabled()){
             v++;
         }
-        ////////////////////////////////////////////////////////////////////////
-        /*SE A VEZ FOR DO 3º E O MESMO ESTIVER DESABILITADO*/
         if(v == 3 && TEC_3_BTN.isSelected() || v == 3 && !TEC_3_BTN.isEnabled()){
+            v++;
+        }
+        if(v == 4 && TEC_4_BTN.isSelected() || v == 4 && !TEC_4_BTN.isEnabled()){
+            v++;
+        }
+        if(v == 5 && TEC_5_BTN.isSelected() || v == 5 && !TEC_3_BTN.isEnabled()){
             v=1;
         }
         ////////////////////////////////////////////////////////////////////////
-        /*SE APENAS O 2º BOTAO ESTIVER HABILITADO*/
-        if(TEC_1_BTN.isSelected() && TEC_3_BTN.isSelected()){
+        /*SE APENAS O 2º TÉCNICO ESTIVER HABILITADO*/
+        if(TEC_1_BTN.isSelected() && TEC_3_BTN.isSelected() && TEC_4_BTN.isSelected() && TEC_5_BTN.isSelected()){
             v=2;
         }
         ////////////////////////////////////////////////////////////////////////
-        /*SE A VEZ FOR DO 1º E O MESMO ESTIVER HABILITADO*/
+        /*SE APENAS O 3º TÉCNICO ESTIVER HABILITADO*/
+        if(TEC_1_BTN.isSelected() && TEC_2_BTN.isSelected() && TEC_4_BTN.isSelected() && TEC_5_BTN.isSelected()){
+            v=3;
+        }
+        ////////////////////////////////////////////////////////////////////////
+        /*SE APENAS O 4º TÉCNICO ESTIVER HABILITADO*/
+        if(TEC_1_BTN.isSelected() && TEC_2_BTN.isSelected() && TEC_3_BTN.isSelected() && TEC_5_BTN.isSelected()){
+            v=4;
+        }
+        ////////////////////////////////////////////////////////////////////////
+        /*NA VEZ DO TÉCNICO E O MESMO ESTIVER HABILITADO*/
         if(v == 1 && !TEC_1_BTN.isSelected()){
             
             TEXTO_NOME_DA_VEZ.setText(palavras_separadas_linha_1[0]+" - "+palavras_separadas_linha_1[1]);
@@ -403,8 +465,6 @@ public class Tela extends javax.swing.JFrame {
             TDA++;
             
         }
-        ////////////////////////////////////////////////////////////////////////
-        /*SE A VEZ FOR DO 2º E O MESMO ESTIVER HABILITADO*/
         if(v == 2 && !TEC_2_BTN.isSelected()){
             
             TEXTO_NOME_DA_VEZ.setText(palavras_separadas_linha_2[0]+" - "+palavras_separadas_linha_2[1]);
@@ -413,8 +473,6 @@ public class Tela extends javax.swing.JFrame {
             TDA++;
             
         }
-        ////////////////////////////////////////////////////////////////////////
-        /*SE A VEZ FOR DO 3º E O MESMO ESTIVER HABILITADO*/
         if(v == 3 && !TEC_3_BTN.isSelected()){ 
             
             TEXTO_NOME_DA_VEZ.setText(palavras_separadas_linha_3[0]+" - "+palavras_separadas_linha_3[1]);
@@ -422,11 +480,27 @@ public class Tela extends javax.swing.JFrame {
             TEC_3_BTN.setText(palavras_separadas_linha_3[0]+" - "+AT3);
             TDA++;
             
+        }
+        if(v == 4 && !TEC_4_BTN.isSelected()){ 
+            
+            TEXTO_NOME_DA_VEZ.setText(palavras_separadas_linha_4[0]+" - "+palavras_separadas_linha_4[1]);
+            AT4++;
+            TEC_4_BTN.setText(palavras_separadas_linha_4[0]+" - "+AT4);
+            TDA++;
+            
+        }
+        if(v == 5 && !TEC_5_BTN.isSelected()){ 
+            
+            TEXTO_NOME_DA_VEZ.setText(palavras_separadas_linha_5[0]+" - "+palavras_separadas_linha_5[1]);
+            AT5++;
+            TEC_5_BTN.setText(palavras_separadas_linha_5[0]+" - "+AT5);
+            TDA++;
+            
             v = 0;
         }
         ////////////////////////////////////////////////////////////////////////
-        /*SE A VEZ FOR DO 3º E O MESMO ESTIVER DESABILITADO*/
-        if(v == 3 && TEC_3_BTN.isSelected() || v == 3 && !TEC_3_BTN.isEnabled()){
+        /*NA VEZ DO ÚLTIMO TÉCNICO E O MESMO ESTIVER DESABILITADO*/
+        if(v == 5 && TEC_5_BTN.isSelected() || v == 5 && !TEC_5_BTN.isEnabled()){
             v = 0;
         }
         ////////////////////////////////////////////////////////////////////////
@@ -523,10 +597,24 @@ public class Tela extends javax.swing.JFrame {
 
     private void TEC_4_BTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TEC_4_BTNMouseClicked
         // TODO add your handling code here:
+        if(TEC_4_BTN.isSelected()){
+            TEC_4_BTN.setSelected(true);
+            TEC_4_BTN.setBackground(Color.red);
+        }else{
+            TEC_4_BTN.setSelected(false);
+            TEC_4_BTN.setBackground(Color.green);
+        }
     }//GEN-LAST:event_TEC_4_BTNMouseClicked
 
     private void TEC_5_BTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TEC_5_BTNMouseClicked
         // TODO add your handling code here:
+        if(TEC_5_BTN.isSelected()){
+            TEC_5_BTN.setSelected(true);
+            TEC_5_BTN.setBackground(Color.red);
+        }else{
+            TEC_5_BTN.setSelected(false);
+            TEC_5_BTN.setBackground(Color.green);
+        }
     }//GEN-LAST:event_TEC_5_BTNMouseClicked
 
     /**
