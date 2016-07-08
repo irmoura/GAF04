@@ -513,7 +513,9 @@ public class Tela extends javax.swing.JFrame {
         Codigos.Arquivo.gravar("Total de atendimentos: "+TDA,
                                palavras_separadas_linha_1[0]+" = "+AT1,
                                palavras_separadas_linha_2[0]+" = "+AT2,
-                               palavras_separadas_linha_3[0]+" = "+AT3);
+                               palavras_separadas_linha_3[0]+" = "+AT3,
+                               palavras_separadas_linha_4[0]+" = "+AT4,
+                               palavras_separadas_linha_5[0]+" = "+AT5);
         
     }//GEN-LAST:event_formMouseClicked
 

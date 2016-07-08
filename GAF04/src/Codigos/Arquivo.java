@@ -48,7 +48,7 @@ public class Arquivo {
             Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public static void gravar(String d1, String d2, String d3, String d4){
+    public static void gravar(String d1, String d2, String d3, String d4, String d5, String d6){
         try {
             informacoes = new FileWriter("C:\\GAF04\\"+"Registros.txt");
         } catch (IOException ex) {
@@ -60,6 +60,8 @@ public class Arquivo {
               gravarArq.println(""+d2);
               gravarArq.println(""+d3);
               gravarArq.println(""+d4);
+              gravarArq.println(""+d5);
+              gravarArq.println(""+d6);
         }
         try {
             informacoes.close();
