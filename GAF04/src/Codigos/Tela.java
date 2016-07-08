@@ -292,12 +292,21 @@ public class Tela extends javax.swing.JFrame {
                 TEC_5_BTN.setBackground(Color.green);
             }
             ////////////////////////////////////////////////////////////////////
-            /*DESAHABILITA O BOTAO NA HORA E MINUTO DEFINIDOS*/
+            /*TÉCNICOS DESABILITADOS NA HORA E MINUTO DEFINIDOS*/
+            if(horas.equals(ST1)){
+                TEC_1_BTN.setEnabled(false);
+            }
             if(horas.equals(ST2)){
                 TEC_2_BTN.setEnabled(false);
             }
             if(horas.equals(ST3)){
                 TEC_3_BTN.setEnabled(false);
+            }
+            if(horas.equals(ST4)){
+                TEC_4_BTN.setEnabled(false);
+            }
+            if(horas.equals(ST5)){
+                TEC_5_BTN.setEnabled(false);
             }
             ////////////////////////////////////////////////////////////////////
         });
